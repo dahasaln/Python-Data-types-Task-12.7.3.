@@ -10,15 +10,16 @@
 #Решение:
 
 per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
-money = int(input("Введите сумму, которую планируете положить под проценты:"))
+money = float(input("Введите сумму, которую планируете положить под проценты:"))
 
-TKB = int((per_cent['ТКБ']) * (money/100))
-CKB = int((per_cent['СКБ']) * (money/100))
-SBER = int((per_cent['СБЕР']) * (money/100))
-VTB = int((per_cent['ВТБ']) * (money/100))
+TKB = round(float((per_cent['ТКБ']) * (money/100)),2)
+CKB = round(float((per_cent['СКБ']) * (money/100)),2)
+SBER = round(float((per_cent['СБЕР']) * (money/100)),2)
+VTB = round(float((per_cent['ВТБ']) * (money/100)),2)
 
 deposit = [TKB, CKB, SBER, VTB]
-print("Накопленные средства за год в каждом из банков =", deposit)
+print("Накопленные средства за год в каждом из банков =",deposit,)
 
-print("Максимальная сумма, которую вы можете заработать:", max(deposit))
+print("Максимальная сумма, которую вы можете заработать:",round(max(deposit),2),'рублей')
+
 print(per_cent)
