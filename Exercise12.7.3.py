@@ -18,7 +18,7 @@ SBER = round(float((per_cent['СБЕР']) * (money/100)),2)
 VTB = round(float((per_cent['ВТБ']) * (money/100)),2)
 
 deposit = [TKB, CKB, SBER, VTB]
-print("Накопленные средства за год в каждом из банков =",deposit,)
+print("Накопленные средства за год в каждом из банков =",deposit)
 
 print("Максимальная сумма, которую вы можете заработать:",round(max(deposit),2),'рублей')
 
